@@ -24,6 +24,7 @@ body {
   left: 1svw;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 1svw;
   flex-wrap: wrap;
   /* height: 15svw; */

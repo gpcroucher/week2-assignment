@@ -1,21 +1,4 @@
 const gallery = [
-  // {
-  //   alt: "Rhyzobius forestieri: a dark fuzzy ladybird on a leaf",
-  //   src: "https://inaturalist-open-data.s3.amazonaws.com/photos/313389084/original.jpeg",
-  // },
-  // {
-  //   alt: "22-Spot Ladybird: a yellow ladybird with black spots, on a leaf",
-  //   src: "https://inaturalist-open-data.s3.amazonaws.com/photos/226247594/original.jpeg",
-  // },
-  // {
-  //   alt: "Cream-streaked Ladybird: a ladybird with faint cream-coloured markings, on tree bark",
-  //   src: "https://inaturalist-open-data.s3.amazonaws.com/photos/184661548/original.jpeg",
-  // },
-  // {
-  //   alt: "Cream-spot Ladybird: a brick-red ladybird with big white spots",
-  //   src: "https://inaturalist-open-data.s3.amazonaws.com/photos/224588441/original.jpeg",
-  // },
-
   {
     src: "https://inaturalist-open-data.s3.amazonaws.com/photos/137774749/original.jpeg",
     srcset: "",
@@ -36,6 +19,26 @@ const gallery = [
     src: "https://inaturalist-open-data.s3.amazonaws.com/photos/137760454/original.jpeg",
     alt: "Garden Bumblebee",
     pos: 4,
+  },
+  {
+    alt: "Rhyzobius forestieri: a dark fuzzy ladybird on a leaf",
+    src: "https://inaturalist-open-data.s3.amazonaws.com/photos/313389084/original.jpeg",
+    pos: 5,
+  },
+  {
+    alt: "22-Spot Ladybird: a yellow ladybird with black spots, on a leaf",
+    src: "https://inaturalist-open-data.s3.amazonaws.com/photos/226247594/original.jpeg",
+    pos: 6,
+  },
+  {
+    alt: "Cream-streaked Ladybird: a ladybird with faint cream-coloured markings, on tree bark",
+    src: "https://inaturalist-open-data.s3.amazonaws.com/photos/184661548/original.jpeg",
+    pos: 7,
+  },
+  {
+    alt: "Cream-spot Ladybird: a brick-red ladybird with big white spots",
+    src: "https://inaturalist-open-data.s3.amazonaws.com/photos/224588441/original.jpeg",
+    pos: 8,
   },
 ];
 
