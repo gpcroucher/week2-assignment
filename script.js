@@ -43,25 +43,34 @@ const bigImage = document.querySelector(".big-image");
 const menu = document.querySelector(".menu");
 buildMenu(gallery);
 
+let nextElement;
 // change pictures with arrow keys
 document.body.addEventListener("keydown", (event) => {
   if (event.key === "ArrowLeft") {
     if (bigImage.hasAttribute("pos")) {
-      // todo:
-      // if gallery has an image with pos === pos-1,
-      // displayImage(that image);
-      // let nextElement = gallery.find(
-      //   (element) => element.pos == bigImage.pos - 1
-      // );
-      // if (nextElement != undefined) {
-      //   setImageAttributes(bigImage, nextElement);
-      // }
+      nextElement = gallery.find(
+        (element) => element.pos == bigImage.getAttribute("pos") - 1
+      );
+      if (nextElement != undefined) {
+        setImageAttributes(bigImage, nextElement);
+        document.getElementById(`menu-button-${nextElement.pos}`).focus();
+      }
       event.preventDefault();
     }
   } else if (event.key === "ArrowRight") {
-    // todo:
-    // the same but +1
-    event.preventDefault();
+    // console.log("right arrow pressed");
+    if (bigImage.hasAttribute("pos")) {
+      console.log(bigImage.getAttribute("pos"));
+      // this bit tripped me up for ages because it was the same code as the left arrow version, but it wasn't working because "+" was concatenating instead of adding
+      let nextPos = Number(bigImage.getAttribute("pos")) + 1;
+      nextElement = gallery.find((element) => element.pos == nextPos);
+      console.log(nextElement);
+      if (nextElement != undefined) {
+        setImageAttributes(bigImage, nextElement);
+        document.getElementById(`menu-button-${nextElement.pos}`).focus();
+      }
+      event.preventDefault();
+    }
   }
 });
 
@@ -92,6 +101,7 @@ function buildMenu(imagesArray) {
         event.preventDefault();
       }
     });
+    newButton.id = `menu-button-${imageObject.pos}`;
     newButton.appendChild(newImage);
     menu.appendChild(newButton);
   });
